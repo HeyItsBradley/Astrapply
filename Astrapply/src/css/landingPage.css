@@ -4,8 +4,8 @@
   /* align-items: center; */
   height: 100vh;
   width: 100%;
-  padding-bottom: 5rem;
-  background-color: var(--main);
+  background-size: cover;
+  background-position: center;
 }
 .landingLeft {
   width: 50%;
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 6rem;
 }
 .landingHeader {
   font-size: 4rem;
@@ -22,7 +23,7 @@
 }
 .landingSpan {
   padding-top: 1rem;
-  color: gray;
+  color: rgb(194, 194, 194);
   font-size: 2rem;
   font-style: italic;
 }
@@ -33,13 +34,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 6rem;
 }
 .landingOr {
   color: white;
 }
 
 .landingButton {
-  background-color: var(--second);
+  background-color: var(--main);
   color: white;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 20px;

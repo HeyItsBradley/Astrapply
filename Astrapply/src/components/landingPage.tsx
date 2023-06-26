@@ -1,5 +1,6 @@
 import "../css/landingPage.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import wave from "../assets/wave.svg";
 
 function LandingPage() {
   const { loginWithRedirect } = useAuth0();
@@ -11,7 +12,10 @@ function LandingPage() {
     });
   return (
     <>
-      <div className="landingContainer">
+      <div
+        className="landingContainer"
+        style={{ backgroundImage: `url(${wave})` }}
+      >
         <section className="landingLeft">
           <span className="landingHeader">Welcome</span>
           <span className="landingHeader">to</span>
