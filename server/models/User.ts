@@ -15,12 +15,12 @@ const userSchema = new Schema(
       default: Date.now,
       get: (timeStamp) => new Date(timeStamp).toDateString(),
     },
-    jobs:[
+    jobs: [
       {
-        type:Schema.Types.ObjectId,
-        ref:"Job"
-      }
-    ]
+        type: Schema.Types.ObjectId,
+        ref: "Job",
+      },
+    ],
   },
   {
     toJSON: {

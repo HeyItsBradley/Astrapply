@@ -45,7 +45,7 @@
   color: white;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 20px;
-  border: 1px solid var(--darkest);
+  border: none;
   font-size: 1.5rem;
   font-family: "Nunito", sans-serif;
 }
