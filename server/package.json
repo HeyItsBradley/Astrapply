@@ -1,0 +1,24 @@
+{
+  "name": "astrapply",
+  "version": "1.0.0",
+  "description": "A service for keeping track of job applications",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "ts-node server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.12.0",
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1",
+    "mongoose": "^7.3.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "astrapply",
+  "version": "1.0.0",
+  "description": "A website for tracking job application",
+  "main": "index.js",
+  "scripts": {
+    "develop": "concurrently \"cd server && npm run start\" \"cd Astrapply && npm run dev\"",
+    "seed": "cd server && npm run seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
