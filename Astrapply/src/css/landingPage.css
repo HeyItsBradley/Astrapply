@@ -1,0 +1,52 @@
+.landingContainer {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  width: 100%;
+  padding-bottom: 5rem;
+  background-color: var(--main);
+}
+.landingLeft {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingHeader {
+  font-size: 4rem;
+  word-wrap: normal;
+  line-height: 0.9;
+  color: white;
+}
+.landingSpan {
+  padding-top: 1rem;
+  color: gray;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.landingRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingOr {
+  color: white;
+}
+
+.landingButton {
+  background-color: var(--second);
+  color: white;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--darkest);
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+}
+.landingButton:hover {
+  cursor: pointer;
+}

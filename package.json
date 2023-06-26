@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "develop": "concurrently \"cd server && npm run start\" \"cd Astrapply && npm run dev\"",
-    "seed": "cd server && npm run seed"
+    "seed": "cd server && npm run seed",
+    "install": "concurrently \"cd server && npm i\" \"cd Astrapply && npm i\""
   },
   "author": "",
   "license": "ISC",
