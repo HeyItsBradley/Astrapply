@@ -7,6 +7,20 @@ const userSchema = new Schema(
       required: true,
       trim: true,
     },
+    authSub: {
+      type: String,
+    },
+    joinDate: {
+      type: Date,
+      default: Date.now,
+      get: (timeStamp) => new Date(timeStamp).toDateString(),
+    },
+    jobs:[
+      {
+        type:Schema.Types.ObjectId,
+        ref:"Job"
+      }
+    ]
   },
   {
     toJSON: {

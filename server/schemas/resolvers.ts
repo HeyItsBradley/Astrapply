@@ -4,7 +4,8 @@ const resolvers = {
   Query: {
     getUser: async (_, { authSub }) => {
       try {
-        const user = await User.findOne({ authSub: authSub });
+        const user = await User.findOne({ authSub: authSub }).populate("Jobs");
+        return user;
       } catch (err) {
         if (err instanceof Error) {
           throw new Error(err.message);
