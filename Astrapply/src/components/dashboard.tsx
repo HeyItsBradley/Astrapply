@@ -1,7 +1,16 @@
 import wave from "../assets/wave.svg";
+import menuIcon from "../assets/menuIcon.png";
+import gridIcon from "../assets/gridIcon.png";
 import "../css/dash.css";
+import { useState } from "react";
 
 function Dashboard() {
+  const [displayState, setDisplayState] = useState(true);
+
+  function displayChange() {
+    setDisplayState(!displayState);
+  }
+
   return (
     <div className="dashWrapper">
       <div
@@ -17,7 +26,20 @@ function Dashboard() {
           <div className="dashBar">
             <div className="dashBarDisplayWrapper">
               <p>Display:</p>
-              <div className="dashBarDisplayIcons"></div>
+              <div className="dashBarDisplayIcons">
+                <img
+                  className={`displayIcon ${displayState ? "displayFlat" : ""}`}
+                  src={menuIcon}
+                  onClick={displayChange}
+                />
+                <img
+                  className={`displayIcon ${
+                    !displayState ? "displayGrid" : ""
+                  }`}
+                  src={gridIcon}
+                  onClick={displayChange}
+                />
+              </div>
             </div>
             <span className="dashNewJob">+ New job</span>
           </div>
@@ -27,4 +49,5 @@ function Dashboard() {
     </div>
   );
 }
+
 export default Dashboard;

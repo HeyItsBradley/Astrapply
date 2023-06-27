@@ -1,23 +1,26 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import "../css/navbar.css";
 import menu from "../assets/menuIcon.png";
+import logo from "../assets/atrapplyLogoWhite.png";
 import defaultPfp from "../assets/loginAvatar copy.svg";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 function NavBar() {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef: RefObject<HTMLDivElement> = useRef(null);
 
   const handleToggle = () => {
     console.log("click");
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  const handleClickOutside = (event: Event) => {
+    const targetNode = event.target as Node;
+
+    if (dropdownRef.current && !dropdownRef.current.contains(targetNode)) {
       setIsOpen(false);
     }
   };
@@ -35,7 +38,10 @@ function NavBar() {
     return (
       <div className="navWrapper">
         <nav className="nav">
-          <div className="navbar-left">Astrapply</div>
+          <div className="navbar-left">
+            <img className="navLogo" src={logo} />
+            <p>strapply</p>
+          </div>
 
           <div className="middleDiv">Welcome, {user.given_name}</div>
 
@@ -49,6 +55,7 @@ function NavBar() {
           </div>
           <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
             <Link to={"/account"}>Account</Link>
+            <Link to={"/dash"}>DashBoard</Link>
             <a href="#" onClick={() => logout()}>
               Logout
             </a>
