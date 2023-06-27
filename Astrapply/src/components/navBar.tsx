@@ -5,10 +5,6 @@ function NavBar() {
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
     useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
-
   console.log(isAuthenticated);
   console.log(user);
   if (isAuthenticated && user) {
