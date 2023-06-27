@@ -10,13 +10,14 @@ function NavBar() {
   }
 
   console.log(isAuthenticated);
+  console.log(user);
   if (isAuthenticated && user) {
     return (
       <div className="navWrapper">
         <nav className="nav">
           <div className="navbar-left">Astrapply</div>
 
-          <div className="middleDiv">Welcome, {user.username}</div>
+          <div className="middleDiv">Welcome, {user.given_name}</div>
 
           <div className="navbar-right">
             <button onClick={() => loginWithRedirect()}>Log in</button>

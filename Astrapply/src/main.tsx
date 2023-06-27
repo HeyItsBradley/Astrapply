@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     domain="dev-axmubii7uwlx3bez.us.auth0.com"
     clientId="V6jIlSje7YT00p1aGiDez0sL7ZUV0qWN"
     authorizationParams={{
-      redirect_uri: window.location.origin,
+      redirect_uri: "http://localhost:3000/dash",
     }}
   >
     <React.StrictMode>

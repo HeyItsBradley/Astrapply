@@ -2,6 +2,7 @@ import express from "express";
 import { db } from "./config/connection";
 import { typeDefs, resolvers } from "./schemas";
 import { ApolloServer } from "apollo-server-express";
+import cors from "cors";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -16,6 +17,7 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 app.use("/", router);
 
 app.listen(3000, () => console.log("Server is started"));
