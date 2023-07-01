@@ -29,22 +29,21 @@ const jobSchema = new Schema({
     type: String,
     trim: true,
   },
-  materials: [
-    {
-      resume: {
-        type: String,
-        trim: true,
-      },
-      coverLetter: {
-        type: String,
-        trim: true,
-      },
-      portfolio: {
-        type: String,
-        trim: true,
-      },
+  materials: {
+    resume: {
+      type: String,
+      trim: true,
     },
-  ],
+    coverLetter: {
+      type: String,
+      trim: true,
+    },
+    portfolio: {
+      type: String,
+      trim: true,
+    },
+  },
+
   status: {
     type: String,
     default: "Waiting...",

@@ -38,10 +38,12 @@ function NavBar() {
     return (
       <div className="navWrapper">
         <nav className="nav">
-          <div className="navbar-left">
-            <img className="navLogo" src={logo} />
-            <p>strapply</p>
-          </div>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <div className="navbar-left">
+              <img className="navLogo" src={logo} />
+              <p>strapply</p>
+            </div>
+          </Link>
 
           <div className="middleDiv">Welcome, {user.given_name}</div>
 
@@ -67,7 +69,10 @@ function NavBar() {
   return (
     <div className="navWrapper">
       <nav className="nav">
-        <div className="navbar-left">Astrapply</div>
+        <div className="navbar-left">
+          <img className="navLogo" src={logo} />
+          <p>strapply</p>
+        </div>
 
         <div
           className={`navbar-right ${isOpen ? "shadow" : ""}`}

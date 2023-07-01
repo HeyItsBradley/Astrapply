@@ -17,6 +17,9 @@
   display: flex;
   align-items: center;
 }
+.navbar-left p {
+  color: white;
+}
 .navLogo {
   height: 90%;
 }
@@ -39,7 +42,7 @@
 
 .pfp {
   height: 70%;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 1px solid white;
 }
 
