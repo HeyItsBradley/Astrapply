@@ -72,7 +72,9 @@ const JobModal = () => {
     try {
       const sub = user?.sub;
       const job = await addJob({ variables: { ...formState, authSub: sub } });
-      navigate("/dash");
+      resetFormState();
+      const dialog: HTMLElement | any = document.getElementById("addJobModal");
+      dialog.close();
     } catch (err) {
       console.log(err);
       console.log(formState);
