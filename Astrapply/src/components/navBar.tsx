@@ -37,42 +37,14 @@ function NavBar() {
   if (isAuthenticated && user) {
     return (
       <div className="navWrapper">
-        <nav className="nav">
-          <Link to={"/"} style={{ textDecoration: "none" }}>
-            <div className="navbar-left">
-              <img className="navLogo" src={logo} />
-              <p>strapply</p>
-            </div>
-          </Link>
-
-          <div className="middleDiv">Welcome, {user.given_name}</div>
-
-          <div
-            className={`navbar-right ${isOpen ? "shadow" : ""}`}
-            ref={dropdownRef}
-            onClick={handleToggle}
-          >
-            <img className="menuIcon" src={menu} />
-            <img className="pfp" src={user.picture} />
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <div className="navbar-left">
+            <img className="navLogo" src={logo} />
+            <p>strapply</p>
           </div>
-          <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
-            <Link to={"/account"}>Account</Link>
-            <Link to={"/dash"}>DashBoard</Link>
-            <a href="#" onClick={() => logout()}>
-              Logout
-            </a>
-          </div>
-        </nav>
-      </div>
-    );
-  }
-  return (
-    <div className="navWrapper">
-      <nav className="nav">
-        <div className="navbar-left">
-          <img className="navLogo" src={logo} />
-          <p>strapply</p>
-        </div>
+        </Link>
+
+        <div className="middleDiv">Welcome, {user.given_name}</div>
 
         <div
           className={`navbar-right ${isOpen ? "shadow" : ""}`}
@@ -80,15 +52,39 @@ function NavBar() {
           onClick={handleToggle}
         >
           <img className="menuIcon" src={menu} />
-          <img className="pfp" src={defaultPfp} />
+          <img className="pfp" src={user.picture} />
         </div>
         <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
           <Link to={"/account"}>Account</Link>
-          <a href="#" onClick={() => loginWithRedirect()}>
-            Sign in
+          <Link to={"/dash"}>DashBoard</Link>
+          <a href="#" onClick={() => logout()}>
+            Logout
           </a>
         </div>
-      </nav>
+      </div>
+    );
+  }
+  return (
+    <div className="navWrapper">
+      <div className="navbar-left">
+        <img className="navLogo" src={logo} />
+        <p>strapply</p>
+      </div>
+
+      <div
+        className={`navbar-right ${isOpen ? "shadow" : ""}`}
+        ref={dropdownRef}
+        onClick={handleToggle}
+      >
+        <img className="menuIcon" src={menu} />
+        <img className="pfp" src={defaultPfp} />
+      </div>
+      <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
+        <Link to={"/account"}>Account</Link>
+        <a href="#" onClick={() => loginWithRedirect()}>
+          Sign in
+        </a>
+      </div>
     </div>
   );
 }

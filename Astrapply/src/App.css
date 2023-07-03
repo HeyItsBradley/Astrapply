@@ -13,3 +13,8 @@
   margin: 0;
   padding: 0;
 }
+.siteContainer {
+  background-color: #4c3c77;
+  background-size: cover;
+  background-position: center;
+}

@@ -4,13 +4,12 @@
   border-bottom: 1px solid white;
   background-color: var(--main);
   color: white;
-}
-
-.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 75px;
 }
+
 .navbar-left {
   font-size: 2rem;
   height: 2rem;
@@ -23,9 +22,12 @@
 .navLogo {
   height: 90%;
 }
+.middleDiv {
+  font-size: 1.5rem;
+}
 .navbar-right {
-  height: 2.5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 6rem;
   border: 1px solid white;
   border-radius: 20px;
   display: flex;

@@ -14,7 +14,6 @@ function LandingPage() {
     <>
       <div
         className="landingContainer"
-        style={{ backgroundImage: `url(${wave})` }}
       >
         <section className="landingLeft">
           <span className="landingHeader">Welcome</span>
